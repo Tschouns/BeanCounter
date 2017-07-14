@@ -4,7 +4,6 @@
     using Calculator.Combination;
     using Input;
     using System.Collections.Generic;
-    using System.Security.Policy;
 
     /// <summary>
     /// Implements <see cref="ICombination"/>. Also provides a particular hash code.
@@ -36,6 +35,45 @@
         public override int GetHashCode()
         {
             return this._hashCode;
+        }
+
+        public override bool Equals(object obj)
+        {
+            // If obj is null or not a Combination, return false.
+            var combination = obj as Combination;
+            if (combination == null)
+            {
+                return false;
+            }
+
+            return this == combination;
+        }
+
+        public bool Equals(Combination combination)
+        {
+            return this == combination;
+        }
+
+        public static bool operator ==(Combination a, Combination b)
+        {
+            // If both are null, or both are same instance, return true.
+            if (object.ReferenceEquals(a, b))
+            {
+                return true;
+            }
+
+            // If one is null, but not both, return false.
+            if (((object)a == null) || ((object)b == null))
+            {
+                return false;
+            }
+
+            return a.GetHashCode() == b.GetHashCode();
+        }
+
+        public static bool operator !=(Combination a, Combination b)
+        {
+            return !(a == b);
         }
 
         /// <summary>
