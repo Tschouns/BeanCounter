@@ -1,4 +1,4 @@
-﻿namespace BeanCounter.Calculator.Combination
+﻿namespace BeanCounter.Calculator.Combinations
 {
     using Input;
     using System.Collections.Generic;

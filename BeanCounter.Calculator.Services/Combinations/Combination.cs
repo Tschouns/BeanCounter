@@ -1,7 +1,7 @@
-﻿namespace BeanCounter.Calculator.Services.Combination
+﻿namespace BeanCounter.Calculator.Services.Combinations
 {
     using Base.RuntimeChecks;
-    using Calculator.Combination;
+    using Calculator.Combinations;
     using Input;
     using System.Collections.Generic;
 

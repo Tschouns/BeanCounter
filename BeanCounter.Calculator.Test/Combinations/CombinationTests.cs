@@ -1,9 +1,9 @@
-﻿namespace BeanCounter.Calculator.Test
+﻿namespace BeanCounter.Calculator.Combinations.Test
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
-    public class UnitTest1
+    public class CombinationTests
     {
         [TestMethod]
         public void TestMethod1()

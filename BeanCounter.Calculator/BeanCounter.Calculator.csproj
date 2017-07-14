@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Combination\ICombination.cs" />
-    <Compile Include="Combination\ICreateCombinationsService.cs" />
+    <Compile Include="Combinations\ICombination.cs" />
+    <Compile Include="Combinations\ICreateCombinationsService.cs" />
     <Compile Include="Input\Constraints\BlockedByContraint.cs" />
     <Compile Include="Input\Effects\ReduceDurationAbsoluteEffect.cs" />
     <Compile Include="Input\Effects\ReduceDurationRelativeEffect.cs" />
