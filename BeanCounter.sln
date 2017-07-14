@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeanCounter.Calculator", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeanCounter.Calculator.Services", "BeanCounter.Calculator.Services\BeanCounter.Calculator.Services.csproj", "{EBB2ED0C-017C-468C-9BBA-5DA8B91137F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeanCounter.Calculator.Test", "BeanCounter.Calculator.Test\BeanCounter.Calculator.Test.csproj", "{0E2B05C9-2331-4888-9F39-65F83320D653}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{EBB2ED0C-017C-468C-9BBA-5DA8B91137F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBB2ED0C-017C-468C-9BBA-5DA8B91137F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBB2ED0C-017C-468C-9BBA-5DA8B91137F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E2B05C9-2331-4888-9F39-65F83320D653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E2B05C9-2331-4888-9F39-65F83320D653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E2B05C9-2331-4888-9F39-65F83320D653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E2B05C9-2331-4888-9F39-65F83320D653}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
