@@ -50,8 +50,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Combinations\CombinationTests.cs" />
+    <Compile Include="Combinations\CombinationEqualityTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BeanCounter.Calculator.Services\BeanCounter.Calculator.Services.csproj">
+      <Project>{ebb2ed0c-017c-468c-9bba-5da8b91137f5}</Project>
+      <Name>BeanCounter.Calculator.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BeanCounter.Calculator\BeanCounter.Calculator.csproj">
+      <Project>{80bc0d23-581c-47da-bab0-fb4f45bcdc10}</Project>
+      <Name>BeanCounter.Calculator</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
