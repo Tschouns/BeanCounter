@@ -51,7 +51,7 @@ bin/
 obj/
 
 # User options file
-.vs/Blitz/v14/.suo
+.vs\BeanCounter\v14
 
 # Style Cop cache files
 **/StyleCop.Cache
