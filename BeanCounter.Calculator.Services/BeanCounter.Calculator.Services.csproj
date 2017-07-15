@@ -41,6 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Combinations\Combination.cs" />
+    <Compile Include="Combinations\ICombinationGenerator.cs" />
+    <Compile Include="Combinations\IRandomizer.cs" />
+    <Compile Include="Combinations\RandomCombinationGenerator.cs" />
+    <Compile Include="Combinations\Randomizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
