@@ -1,9 +1,9 @@
 ﻿namespace BeanCounter.Calculator.Input.Constraints
 {
     /// <summary>
-    /// Marker interface. Represents a contraint.
+    /// Marker interface. Represents a constraint.
     /// </summary>
-    public interface IContraint
+    public interface IConstraint
     {
     }
 }

@@ -20,7 +20,7 @@
         /// </summary>
         void CreateCombinations(
             IEnumerable<Feature> features,
-            IEnumerable<IContraint> contraints,
+            IEnumerable<IConstraint> contraints,
             Action<ICombination> addCombinationAction,
             Func<bool> shouldKeepCreating,
             int maxNumberOfCombinations);

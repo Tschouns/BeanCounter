@@ -32,11 +32,11 @@
         }
 
         /// <summary>
-        ///  See <see cref="ICreateCombinationsService.CreateCombinations(IEnumerable{Feature}, IEnumerable{IContraint}, Action{ICombination}, Func{bool})"/>.
+        ///  See <see cref="ICreateCombinationsService.CreateCombinations(IEnumerable{Feature}, IEnumerable{IConstraint}, Action{ICombination}, Func{bool})"/>.
         /// </summary>
         public void CreateCombinations(
             IEnumerable<Feature> features,
-            IEnumerable<IContraint> contraints,
+            IEnumerable<IConstraint> contraints,
             Action<ICombination> addCombinationAction,
             Func<bool> shouldKeepCreating,
             int maxNumberOfCombinations)

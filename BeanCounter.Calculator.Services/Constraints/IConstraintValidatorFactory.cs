@@ -11,6 +11,6 @@
         /// Creates a validator which validates feature combinations against the
         /// specified constraint.
         /// </summary>
-        IContraintValidator CreateValidator(IContraint contraint);
+        IContraintValidator CreateValidator(IConstraint contraint);
     }
 }

@@ -6,12 +6,12 @@
     /// Represents a constraint by which the implementation of one feature is
     /// a precondition for the inplementation of another.
     /// </summary>
-    public class BlockedByContraint : IContraint
+    public class BlockedByConstraint : IConstraint
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BlockedByContraint"/> class.
+        /// Initializes a new instance of the <see cref="BlockedByConstraint"/> class.
         /// </summary>
-        public BlockedByContraint(
+        public BlockedByConstraint(
             Feature blockingFeature,
             Feature blockedFeature)
         {

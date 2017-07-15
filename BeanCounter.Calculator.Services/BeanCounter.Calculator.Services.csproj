@@ -46,7 +46,7 @@
     <Compile Include="Combinations\IRandomizer.cs" />
     <Compile Include="Combinations\RandomCombinationGenerator.cs" />
     <Compile Include="Combinations\Randomizer.cs" />
-    <Compile Include="Constraints\BlockedByContraintValidator.cs" />
+    <Compile Include="Constraints\BlockedByConstraintValidator.cs" />
     <Compile Include="Constraints\ConstraintValidatorFactory.cs" />
     <Compile Include="Constraints\IConstraintValidatorFactory.cs" />
     <Compile Include="Constraints\IContraintValidator.cs" />

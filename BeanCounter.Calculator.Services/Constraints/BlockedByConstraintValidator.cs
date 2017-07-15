@@ -7,16 +7,16 @@
 
     /// <summary>
     /// See <see cref="IContraintValidator"/>. Validates against a specific
-    /// <see cref="BlockedByContraint"/>.
+    /// <see cref="BlockedByConstraint"/>.
     /// </summary>
-    public class BlockedByContraintValidator : IContraintValidator
+    public class BlockedByConstraintValidator : IContraintValidator
     {
-        private readonly BlockedByContraint _constraint;
+        private readonly BlockedByConstraint _constraint;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BlockedByContraintValidator"/> class.
+        /// Initializes a new instance of the <see cref="BlockedByConstraintValidator"/> class.
         /// </summary>
-        public BlockedByContraintValidator(BlockedByContraint constraint)
+        public BlockedByConstraintValidator(BlockedByConstraint constraint)
         {
             ArgumentChecks.AssertNotNull(constraint, nameof(constraint));
 
