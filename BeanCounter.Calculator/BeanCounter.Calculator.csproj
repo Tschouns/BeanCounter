@@ -43,6 +43,7 @@
     <Compile Include="Combinations\ICombination.cs" />
     <Compile Include="Combinations\ICreateCombinationsService.cs" />
     <Compile Include="Input\Constraints\BlockedByContraint.cs" />
+    <Compile Include="Input\Constraints\IContraint.cs" />
     <Compile Include="Input\Effects\ReduceDurationAbsoluteEffect.cs" />
     <Compile Include="Input\Effects\ReduceDurationRelativeEffect.cs" />
     <Compile Include="Input\Feature.cs" />

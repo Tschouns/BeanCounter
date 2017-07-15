@@ -41,10 +41,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Combinations\Combination.cs" />
-    <Compile Include="Combinations\ICombinationGenerator.cs" />
+    <Compile Include="Combinations\CreateCombinationsService.cs" />
+    <Compile Include="Combinations\IRandomCombinationGenerator.cs" />
     <Compile Include="Combinations\IRandomizer.cs" />
     <Compile Include="Combinations\RandomCombinationGenerator.cs" />
     <Compile Include="Combinations\Randomizer.cs" />
+    <Compile Include="Constraints\BlockedByContraintValidator.cs" />
+    <Compile Include="Constraints\ConstraintValidatorFactory.cs" />
+    <Compile Include="Constraints\IConstraintValidatorFactory.cs" />
+    <Compile Include="Constraints\IContraintValidator.cs" />
+    <Compile Include="Math\MathUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

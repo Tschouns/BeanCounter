@@ -1,15 +1,14 @@
 ﻿namespace BeanCounter.Calculator.Services.Combinations
 {
-    using System;
     using System.Collections.Generic;
     using BeanCounter.Calculator.Input;
     using Base.RuntimeChecks;
     using System.Linq;
 
     /// <summary>
-    /// See <see cref="ICombinationGenerator"/>. Generates random combinations.
+    /// See <see cref="IRandomCombinationGenerator"/>.
     /// </summary>
-    public class RandomCombinationGenerator : ICombinationGenerator
+    public class RandomCombinationGenerator : IRandomCombinationGenerator
     {
         private readonly IRandomizer _randomizer;
 
@@ -24,7 +23,7 @@
         }
 
         /// <summary>
-        /// See <see cref="ICombinationGenerator.GenerateCombination(IEnumerable{Feature})"/>.
+        /// See <see cref="IRandomCombinationGenerator.GenerateCombination(IEnumerable{Feature})"/>.
         /// </summary>
         public Combination GenerateCombination(IEnumerable<Feature> features)
         {

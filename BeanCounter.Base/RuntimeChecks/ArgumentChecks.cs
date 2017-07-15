@@ -32,6 +32,17 @@
         /// <summary>
         /// Asserts that a specified argument is not negative.
         /// </summary>
+        public static void AssertNotNegative(int argument, string argumentName)
+        {
+            if (argument < 0)
+            {
+                throw new ArgumentNullException(argumentName);
+            }
+        }
+
+        /// <summary>
+        /// Asserts that a specified argument is not negative.
+        /// </summary>
         public static void AssertNotNegative(decimal argument, string argumentName)
         {
             if (argument < 0)

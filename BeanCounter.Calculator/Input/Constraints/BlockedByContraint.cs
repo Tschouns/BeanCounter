@@ -6,7 +6,7 @@
     /// Represents a constraint by which the implementation of one feature is
     /// a precondition for the inplementation of another.
     /// </summary>
-    public class BlockedByContraint
+    public class BlockedByContraint : IContraint
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BlockedByContraint"/> class.
