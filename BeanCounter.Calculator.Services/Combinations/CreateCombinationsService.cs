@@ -52,7 +52,7 @@
                 .Select(this._constraintValidatorFactory.CreateValidator)
                 .ToList();
 
-            while (alreadyCreatedCombinations.Count <= maxNumberOfCombinations &&
+            while (alreadyCreatedCombinations.Count < maxNumberOfCombinations &&
                    shouldKeepCreating())
             {
                 var combination = this._randomCombinationGenerator.GenerateCombination(features);

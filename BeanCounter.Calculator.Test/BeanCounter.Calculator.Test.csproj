@@ -53,6 +53,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Combinations\CombinationEqualityTests.cs" />
+    <Compile Include="Combinations\CreateCombinationsServiceIntegrationTests.cs" />
     <Compile Include="Combinations\RandomCombinationGeneratorTests.cs" />
     <Compile Include="Combinations\RandomizerFake.cs" />
     <Compile Include="Constraints\BlockedByContraintValidatorTests.cs" />
