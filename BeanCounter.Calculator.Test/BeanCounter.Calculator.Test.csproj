@@ -57,6 +57,7 @@
     <Compile Include="Combinations\RandomCombinationGeneratorTests.cs" />
     <Compile Include="Combinations\RandomizerFake.cs" />
     <Compile Include="Constraints\BlockedByContraintValidatorTests.cs" />
+    <Compile Include="Cost\CostCalculationHelperTests.cs" />
     <Compile Include="Math\MathUtilsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
