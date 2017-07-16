@@ -6,15 +6,15 @@
     /// <summary>
     /// Fake implementation of <see cref="IRandomizer"/>.
     /// </summary>
-    public class RandomizerFake : IRandomizer
+    public class FakeRandomizer : IRandomizer
     {
         private readonly int[] _numbers;
         private int _currentIndex;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="RandomizerFake"/> class.
+        /// Initializes a new instance of the <see cref="FakeRandomizer"/> class.
         /// </summary>
-        public RandomizerFake(params int[] numbers)
+        public FakeRandomizer(params int[] numbers)
         {
             if (numbers.Any())
             {

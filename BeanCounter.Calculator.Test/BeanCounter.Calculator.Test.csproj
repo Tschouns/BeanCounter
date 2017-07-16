@@ -54,8 +54,9 @@
   <ItemGroup>
     <Compile Include="Combinations\CombinationEqualityTests.cs" />
     <Compile Include="Combinations\CreateCombinationsServiceIntegrationTests.cs" />
+    <Compile Include="Combinations\PseudoRandomizer.cs" />
     <Compile Include="Combinations\RandomCombinationGeneratorTests.cs" />
-    <Compile Include="Combinations\RandomizerFake.cs" />
+    <Compile Include="Combinations\FakeRandomizer.cs" />
     <Compile Include="Constraints\BlockedByContraintValidatorTests.cs" />
     <Compile Include="Cost\CostCalculationHelperTests.cs" />
     <Compile Include="Math\MathUtilsTests.cs" />

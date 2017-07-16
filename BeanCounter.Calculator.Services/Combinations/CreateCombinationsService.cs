@@ -39,22 +39,26 @@
             IEnumerable<IConstraint> contraints,
             Action<ICombination> addCombinationAction,
             Func<bool> shouldKeepCreating,
-            int maxNumberOfCombinations)
+            int maxNumberOfAttempts)
         {
             ArgumentChecks.AssertNotNull(features, nameof(features));
             ArgumentChecks.AssertNotNull(contraints, nameof(contraints));
             ArgumentChecks.AssertNotNull(addCombinationAction, nameof(addCombinationAction));
             ArgumentChecks.AssertNotNull(shouldKeepCreating, nameof(shouldKeepCreating));
-            ArgumentChecks.AssertNotNegative(maxNumberOfCombinations, nameof(maxNumberOfCombinations));
+            ArgumentChecks.AssertNotNegative(maxNumberOfAttempts, nameof(maxNumberOfAttempts));
 
             var alreadyCreatedCombinations = new HashSet<Combination>();
             var constraintValidators = contraints
                 .Select(this._constraintValidatorFactory.CreateValidator)
                 .ToList();
 
-            while (alreadyCreatedCombinations.Count < maxNumberOfCombinations &&
+            var attempts = 0;
+
+            while (attempts < maxNumberOfAttempts &&
                    shouldKeepCreating())
             {
+                attempts++;
+
                 var combination = this._randomCombinationGenerator.GenerateCombination(features);
 
                 if (alreadyCreatedCombinations.Contains(combination))

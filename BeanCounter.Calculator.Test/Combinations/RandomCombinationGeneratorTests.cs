@@ -20,7 +20,7 @@
         public void GenerateCombination_RandomIndexIsAlwaysZero_ResultingOrderStaysTheSame()
         {
             // Arrange
-            var candidate = new RandomCombinationGenerator(new RandomizerFake(0));
+            var candidate = new RandomCombinationGenerator(new FakeRandomizer(0));
 
             // Act
             var combination = candidate.GenerateCombination(new[]
@@ -41,7 +41,7 @@
         public void GenerateCombination_RandomIndexIsAlwaysLastPosition_ResultingOrderIsInverted()
         {
             // Arrange
-            var candidate = new RandomCombinationGenerator(new RandomizerFake(2, 1, 0));
+            var candidate = new RandomCombinationGenerator(new FakeRandomizer(2, 1, 0));
 
             // Act
             var combination = candidate.GenerateCombination(new[]
@@ -62,7 +62,7 @@
         public void GenerateCombination_OnlyOneFeature_ResultingListContainsOnlyOneFeature()
         {
             // Arrange
-            var candidate = new RandomCombinationGenerator(new RandomizerFake(4231));
+            var candidate = new RandomCombinationGenerator(new FakeRandomizer(4231));
 
             // Act
             var combination = candidate.GenerateCombination(new[]
@@ -79,7 +79,7 @@
         public void GenerateCombination_WildRandomIndices_ResultingListContainsAllFeature()
         {
             // Arrange
-            var candidate = new RandomCombinationGenerator(new RandomizerFake(53, 895348, 765));
+            var candidate = new RandomCombinationGenerator(new FakeRandomizer(53, 895348, 765));
 
             // Act
             var combination = candidate.GenerateCombination(new[]
@@ -100,7 +100,7 @@
         public void GenerateCombination_LargeFeatureSet_ResultingListContainsAllFeature()
         {
             // Arrange
-            var candidate = new RandomCombinationGenerator(new RandomizerFake(
+            var candidate = new RandomCombinationGenerator(new FakeRandomizer(
                 6282527,
                 8424440,
                 2490841,

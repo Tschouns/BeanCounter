@@ -16,7 +16,7 @@
     public class CreateCombinationsServiceIntegrationTests
     {
         [TestMethod]
-        public void CreateCombinations_1000Features_Generate10000UniqueCombinations()
+        public void CreateCombinations_1000FeaturesNoConstraints_Generate10000UniqueCombinations()
         {
             // Arrange
             var numberOfFeatures = 1000;
@@ -31,21 +31,21 @@
 
             var candidate = new CreateCombinationsService(
                 new ConstraintValidatorFactory(),
-                new RandomCombinationGenerator(new Randomizer()));
+                new RandomCombinationGenerator(new PseudoRandomizer(12567)));
 
             // Act
-            var maxNumberOfCombinations = 10000;
+            var maxNumberOfAttempts = 10000;
             var combinationList = new List<ICombination>();
             candidate.CreateCombinations(
                 features,
                 constraints,
                 c => combinationList.Add(c),
                 () => true,
-                maxNumberOfCombinations);
+                maxNumberOfAttempts);
 
             // Assert
-            Assert.AreEqual(maxNumberOfCombinations, combinationList.Count);
-            Assert.AreEqual(maxNumberOfCombinations, combinationList.Distinct().Count());
+            Assert.AreEqual(maxNumberOfAttempts, combinationList.Count);
+            Assert.AreEqual(combinationList.Count, combinationList.Distinct().Count());
         }
     }
 }

@@ -15,14 +15,14 @@
         /// Creates combinations from the specified features, and calls the specified
         /// <paramref name="addCombinationAction"/> delegate.
         /// It does this as long as the specified <paramref name="shouldKeepCreating"/>
-        /// delegate returns <c>true</c>, or until the specified maximum number of created
-        /// combinations is reached.
+        /// delegate returns <c>true</c>, or until the specified maximum number of attempts
+        /// is reached.
         /// </summary>
         void CreateCombinations(
             IEnumerable<Feature> features,
             IEnumerable<IConstraint> contraints,
             Action<ICombination> addCombinationAction,
             Func<bool> shouldKeepCreating,
-            int maxNumberOfCombinations);
+            int maxNumberOfAttempts);
     }
 }
