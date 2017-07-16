@@ -42,8 +42,12 @@
   <ItemGroup>
     <Compile Include="Combinations\ICombination.cs" />
     <Compile Include="Combinations\ICreateCombinationsService.cs" />
+    <Compile Include="Cost\CombinationCostResult.cs" />
+    <Compile Include="Cost\FeatureCostResult.cs" />
+    <Compile Include="Cost\ICalculateCostService.cs" />
     <Compile Include="Input\Constraints\BlockedByConstraint.cs" />
     <Compile Include="Input\Constraints\IConstraint.cs" />
+    <Compile Include="Input\Effects\IEffect.cs" />
     <Compile Include="Input\Effects\ReduceDurationAbsoluteEffect.cs" />
     <Compile Include="Input\Effects\ReduceDurationRelativeEffect.cs" />
     <Compile Include="Input\Feature.cs" />

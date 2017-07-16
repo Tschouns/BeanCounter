@@ -6,7 +6,7 @@
     /// Represents an effect by which the implementation duration of a feature is reduced by a
     /// fraction, if another feature has been implemented previously.
     /// </summary>
-    public class ReduceDurationRelativeEffect
+    public class ReduceDurationRelativeEffect : IEffect
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReduceDurationRelativeEffect"/> class.

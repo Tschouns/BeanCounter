@@ -50,6 +50,7 @@
     <Compile Include="Constraints\ConstraintValidatorFactory.cs" />
     <Compile Include="Constraints\IConstraintValidatorFactory.cs" />
     <Compile Include="Constraints\IContraintValidator.cs" />
+    <Compile Include="Cost\CalculateCostServices.cs" />
     <Compile Include="Math\MathUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

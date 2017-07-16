@@ -30,7 +30,7 @@
         public string Identifier { get; }
 
         /// <summary>
-        /// Gets the estimated cost of delay per week (in any arbitrary currency).
+        /// Gets the estimated cost of delay per week (expressed in man-days).
         /// </summary>
         public decimal CostOfDelayPerWeek { get; }
 

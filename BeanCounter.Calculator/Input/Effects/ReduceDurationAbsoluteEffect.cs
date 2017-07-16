@@ -6,7 +6,7 @@
     /// Represents an effect by which the implementation duration of a feature is reduced by an
     /// absolute amount, if another feature has been implemented previously.
     /// </summary>
-    public class ReduceDurationAbsoluteEffect
+    public class ReduceDurationAbsoluteEffect : IEffect
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReduceDurationAbsoluteEffect"/> class.
