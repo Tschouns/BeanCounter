@@ -10,8 +10,20 @@
     /// <summary>
     /// See <see cref="ICalculateCostService"/>.
     /// </summary>
-    public class CalculateCostServices : ICalculateCostService
+    public class CalculateCostService : ICalculateCostService
     {
+        private readonly ICostCalculationHelper _costCalculationHelper;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CalculateCostService"/> class.
+        /// </summary>
+        public CalculateCostService(ICostCalculationHelper costCalculationHelper)
+        {
+            ArgumentChecks.AssertNotNull(costCalculationHelper, nameof(costCalculationHelper));
+
+            this._costCalculationHelper = costCalculationHelper;
+        }
+
         /// <summary>
         /// See <see cref="ICalculateCostService.Calculate(ICombination, IEnumerable{IEffect})"/>.
         /// </summary>
@@ -26,19 +38,22 @@
             var featureCostResults = new List<FeatureCostResult>();
             foreach(var feature in combination.Features)
             {
-                totalDelayInDays += feature.DevelopmentDurationInDays;
+                var absoluteCost = this._costCalculationHelper.CalculateAbsoluteCostForFeature(
+                    feature,
+                    totalDelayInDays);
 
-                var absoluteCostOfDelay = totalDelayInDays * feature.CostOfDelayPerWeek / 7;
-                var absoluteCost = absoluteCostOfDelay + feature.DevelopmentDurationInDays;
-
-                // TODO: apply effects...!!
+                // TODO: add effects....
 
                 featureCostResults.Add(new FeatureCostResult(feature, absoluteCost));
 
+                totalDelayInDays += feature.DevelopmentDurationInDays;
                 totalCost += absoluteCost;
             }
 
-            throw new NotImplementedException();
+            return new CombinationCostResult(
+                combination,
+                featureCostResults,
+                totalCost);
         }
     }
 }

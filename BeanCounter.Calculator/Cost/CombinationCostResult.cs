@@ -14,12 +14,15 @@
         /// </summary>
         public CombinationCostResult(
             ICombination combination,
+            IReadOnlyList<FeatureCostResult> featureCostResults,
             decimal totalCost)
         {
             ArgumentChecks.AssertNotNull(combination, nameof(combination));
+            ArgumentChecks.AssertNotNull(featureCostResults, nameof(featureCostResults));
             ArgumentChecks.AssertNotNegative(totalCost, nameof(totalCost));
 
             this.Combination = combination;
+            this.FeatureCostResults = featureCostResults;
             this.TotalCost = totalCost;
         }
 

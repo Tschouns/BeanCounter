@@ -12,15 +12,15 @@
         /// </summary>
         public Feature(
             string identifier,
-            decimal costOfDelayPerWeek,
+            decimal costOfDelayPerDay,
             decimal developmentDurationInDays)
         {
             ArgumentChecks.AssertNotNullOrEmpty(identifier, nameof(identifier));
-            ArgumentChecks.AssertNotNegative(costOfDelayPerWeek, nameof(costOfDelayPerWeek));
+            ArgumentChecks.AssertNotNegative(costOfDelayPerDay, nameof(costOfDelayPerDay));
             ArgumentChecks.AssertNotNegative(developmentDurationInDays, nameof(developmentDurationInDays));
 
             this.Identifier = identifier;
-            this.CostOfDelayPerWeek = costOfDelayPerWeek;
+            this.CostOfDelayPerDay = costOfDelayPerDay;
             this.DevelopmentDurationInDays = developmentDurationInDays;
         }
 
@@ -30,12 +30,12 @@
         public string Identifier { get; }
 
         /// <summary>
-        /// Gets the estimated cost of delay per week (expressed in man-days).
+        /// Gets the estimated cost of delay per day (expressed in man-days).
         /// </summary>
-        public decimal CostOfDelayPerWeek { get; }
+        public decimal CostOfDelayPerDay { get; }
 
         /// <summary>
-        /// Gets the estimated development duration in days.
+        /// Gets the estimated development duration in man-days.
         /// </summary>
         public decimal DevelopmentDurationInDays { get; }
     }
