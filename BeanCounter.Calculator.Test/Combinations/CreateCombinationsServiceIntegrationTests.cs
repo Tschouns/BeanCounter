@@ -10,16 +10,16 @@
     using System.Linq;
 
     /// <summary>
-    /// Tests the <see cref="CreateCombinationsServiceIntegrationTests"/> class.
+    /// Tests the <see cref="CreateCombinationsService"/> class.
     /// </summary>
     [TestClass]
     public class CreateCombinationsServiceIntegrationTests
     {
         [TestMethod]
-        public void CreateCombinations_1000FeaturesNoConstraints_Generate10000UniqueCombinations()
+        public void CreateCombinations_100FeaturesNoConstraints_Generate10000UniqueCombinations()
         {
             // Arrange
-            var numberOfFeatures = 1000;
+            var numberOfFeatures = 100;
 
             var features = new List<Feature>();
             for (int i = 0; i < numberOfFeatures; i++)

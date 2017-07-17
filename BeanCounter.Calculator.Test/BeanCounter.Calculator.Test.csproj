@@ -58,11 +58,16 @@
     <Compile Include="Combinations\RandomCombinationGeneratorTests.cs" />
     <Compile Include="Combinations\FakeRandomizer.cs" />
     <Compile Include="Constraints\BlockedByContraintValidatorTests.cs" />
+    <Compile Include="Cost\CalculateCostServiceIntegrationTests.cs" />
     <Compile Include="Cost\CostCalculationHelperTests.cs" />
     <Compile Include="Math\MathUtilsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BeanCounter.Base\BeanCounter.Base.csproj">
+      <Project>{7a1680e7-7fa0-49cc-a29b-92035e075b0c}</Project>
+      <Name>BeanCounter.Base</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BeanCounter.Calculator.Services\BeanCounter.Calculator.Services.csproj">
       <Project>{ebb2ed0c-017c-468c-9bba-5da8b91137f5}</Project>
       <Name>BeanCounter.Calculator.Services</Name>
