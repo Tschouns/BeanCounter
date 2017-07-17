@@ -30,12 +30,12 @@
         public string Identifier { get; }
 
         /// <summary>
-        /// Gets the estimated cost of delay per day (expressed in man-days).
+        /// Gets the estimated cost of delay per day (in any arbitrary currency).
         /// </summary>
         public decimal CostOfDelayPerDay { get; }
 
         /// <summary>
-        /// Gets the estimated development duration in man-days.
+        /// Gets the estimated development duration in days.
         /// </summary>
         public decimal DevelopmentDurationInDays { get; }
     }

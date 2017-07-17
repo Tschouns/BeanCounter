@@ -33,27 +33,27 @@
             ArgumentChecks.AssertNotNull(effects, nameof(effects));
 
             var totalDelayInDays = 0m;
-            var totalCost = 0m;
+            var totalCostOfDelay = 0m;
 
             var featureCostResults = new List<FeatureCostResult>();
             foreach(var feature in combination.Features)
             {
-                var absoluteCost = this._costCalculationHelper.CalculateAbsoluteCostForFeature(
+                var absoluteCostOfDelay = this._costCalculationHelper.CalculateAbsoluteCostOfDelayForFeature(
                     feature,
                     totalDelayInDays);
 
                 // TODO: add effects....
 
-                featureCostResults.Add(new FeatureCostResult(feature, absoluteCost));
+                featureCostResults.Add(new FeatureCostResult(feature, absoluteCostOfDelay));
 
                 totalDelayInDays += feature.DevelopmentDurationInDays;
-                totalCost += absoluteCost;
+                totalCostOfDelay += absoluteCostOfDelay;
             }
 
             return new CombinationCostResult(
                 combination,
                 featureCostResults,
-                totalCost);
+                totalCostOfDelay);
         }
     }
 }

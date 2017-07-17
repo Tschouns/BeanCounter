@@ -70,16 +70,16 @@
             Assert.AreEqual(1000, resultsOfSecondRun.Count);
             Assert.AreEqual(100000, resultsOfThirdRun.Count);
 
-            var rankedResultsOfFirstRun = resultsOfFirstRun.OrderBy(r => r.TotalCost).ToList();
-            var rankedResultsOfSecondRun = resultsOfSecondRun.OrderBy(r => r.TotalCost).ToList();
-            var rankedResultsOfThirdRun = resultsOfThirdRun.OrderBy(r => r.TotalCost).ToList();
+            var rankedResultsOfFirstRun = resultsOfFirstRun.OrderBy(r => r.TotalCostOfDelay).ToList();
+            var rankedResultsOfSecondRun = resultsOfSecondRun.OrderBy(r => r.TotalCostOfDelay).ToList();
+            var rankedResultsOfThirdRun = resultsOfThirdRun.OrderBy(r => r.TotalCostOfDelay).ToList();
 
             var bestResultOfFirstRun = rankedResultsOfFirstRun.First();
             var bestResultOfSecondRun = rankedResultsOfSecondRun.First();
             var bestResultOfThirdRun = rankedResultsOfThirdRun.First();
 
-            Assert.IsTrue(bestResultOfSecondRun.TotalCost < bestResultOfFirstRun.TotalCost);
-            Assert.IsTrue(bestResultOfThirdRun.TotalCost < bestResultOfSecondRun.TotalCost);
+            Assert.IsTrue(bestResultOfSecondRun.TotalCostOfDelay < bestResultOfFirstRun.TotalCostOfDelay);
+            Assert.IsTrue(bestResultOfThirdRun.TotalCostOfDelay < bestResultOfSecondRun.TotalCostOfDelay);
         }
 
         private static IEnumerable<ICombination> CreateCombinations(

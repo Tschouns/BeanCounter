@@ -10,9 +10,9 @@
     public class CostCalculationHelper : ICostCalculationHelper
     {
         /// <summary>
-        /// See <see cref="ICostCalculationHelper.CalculateAbsoluteCostForFeature(Feature, decimal)"/>.
+        /// See <see cref="ICostCalculationHelper.CalculateAbsoluteCostOfDelayForFeature"/>.
         /// </summary>
-        public decimal CalculateAbsoluteCostForFeature(
+        public decimal CalculateAbsoluteCostOfDelayForFeature(
             Feature feature,
             decimal daysUntilImplementationStart)
         {
@@ -21,9 +21,8 @@
 
             var daysUntilFinished = daysUntilImplementationStart + feature.DevelopmentDurationInDays;
             var absoluteCostOfDelay = daysUntilFinished * feature.CostOfDelayPerDay;
-            var absoluteCostOfFeature = absoluteCostOfDelay + feature.DevelopmentDurationInDays;
 
-            return absoluteCostOfFeature;
+            return absoluteCostOfDelay;
         }
     }
 }

@@ -11,7 +11,7 @@
     public class CostCalculationHelperTests
     {
         [TestMethod]
-        public void CalculateAbsoluteCostForFeature_Cod1Dev5Delay10_Returns20()
+        public void CalculateAbsoluteCostOfDelayForFeature_Cod1Dev5Delay10_Returns15()
         {
             // Arrange
             var candidate = new CostCalculationHelper();
@@ -23,18 +23,18 @@
             var feature = new Feature("Feature XY", costOfDelay, developmentDuration);
 
             // Act
-            var absoluteCost = candidate.CalculateAbsoluteCostForFeature(
+            var absoluteCost = candidate.CalculateAbsoluteCostOfDelayForFeature(
                 feature,
                 delayUntilImplementationStart);
 
             // Assert
-            var expectedCost = 20m;
+            var expectedCost = 15m;
 
             Assert.AreEqual(expectedCost, absoluteCost);
         }
 
         [TestMethod]
-        public void CalculateAbsoluteCostForFeature_Cod12Dev5Delay10_Returns185()
+        public void CalculateAbsoluteCostOfDelayForFeature_Cod12Dev5Delay10_Returns180()
         {
             // Arrange
             var candidate = new CostCalculationHelper();
@@ -46,18 +46,18 @@
             var feature = new Feature("Feature XY", costOfDelay, developmentDuration);
 
             // Act
-            var absoluteCost = candidate.CalculateAbsoluteCostForFeature(
+            var absoluteCost = candidate.CalculateAbsoluteCostOfDelayForFeature(
                 feature,
                 delayUntilImplementationStart);
 
             // Assert
-            var expectedCost = 185m;
+            var expectedCost = 180m;
 
             Assert.AreEqual(expectedCost, absoluteCost);
         }
 
         [TestMethod]
-        public void CalculateAbsoluteCostForFeature_Cod2Dev4Delay0_Returns12()
+        public void CalculateAbsoluteCostOfDelayForFeature_Cod2Dev4Delay0_Returns8()
         {
             // Arrange
             var candidate = new CostCalculationHelper();
@@ -69,18 +69,18 @@
             var feature = new Feature("Feature XY", costOfDelay, developmentDuration);
 
             // Act
-            var absoluteCost = candidate.CalculateAbsoluteCostForFeature(
+            var absoluteCost = candidate.CalculateAbsoluteCostOfDelayForFeature(
                 feature,
                 delayUntilImplementationStart);
 
             // Assert
-            var expectedCost = 12m;
+            var expectedCost = 8m;
 
             Assert.AreEqual(expectedCost, absoluteCost);
         }
 
         [TestMethod]
-        public void CalculateAbsoluteCostForFeature_Cod0Dev5Delay100_Returns5()
+        public void CalculateAbsoluteCostOfDelayForFeature_Cod0Dev5Delay100_Returns0()
         {
             // Arrange
             var candidate = new CostCalculationHelper();
@@ -92,18 +92,18 @@
             var feature = new Feature("Feature XY", costOfDelay, developmentDuration);
 
             // Act
-            var absoluteCost = candidate.CalculateAbsoluteCostForFeature(
+            var absoluteCost = candidate.CalculateAbsoluteCostOfDelayForFeature(
                 feature,
                 delayUntilImplementationStart);
 
             // Assert
-            var expectedCost = 5m;
+            var expectedCost = 0m;
 
             Assert.AreEqual(expectedCost, absoluteCost);
         }
 
         [TestMethod]
-        public void CalculateAbsoluteCostForFeature_CodPoint1Dev7Delay60_Returns13Poin7()
+        public void CalculateAbsoluteCostOfDelayForFeature_CodPoint1Dev7Delay60_Returns6Poin7()
         {
             // Arrange
             var candidate = new CostCalculationHelper();
@@ -115,12 +115,12 @@
             var feature = new Feature("Feature XY", costOfDelay, developmentDuration);
 
             // Act
-            var absoluteCost = candidate.CalculateAbsoluteCostForFeature(
+            var absoluteCost = candidate.CalculateAbsoluteCostOfDelayForFeature(
                 feature,
                 delayUntilImplementationStart);
 
             // Assert
-            var expectedCost = 13.7m;
+            var expectedCost = 6.7m;
 
             Assert.AreEqual(expectedCost, absoluteCost);
         }

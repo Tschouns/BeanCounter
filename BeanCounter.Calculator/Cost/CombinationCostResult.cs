@@ -15,15 +15,15 @@
         public CombinationCostResult(
             ICombination combination,
             IReadOnlyList<FeatureCostResult> featureCostResults,
-            decimal totalCost)
+            decimal aTotalCostOfDelay)
         {
             ArgumentChecks.AssertNotNull(combination, nameof(combination));
             ArgumentChecks.AssertNotNull(featureCostResults, nameof(featureCostResults));
-            ArgumentChecks.AssertNotNegative(totalCost, nameof(totalCost));
+            ArgumentChecks.AssertNotNegative(aTotalCostOfDelay, nameof(aTotalCostOfDelay));
 
             this.Combination = combination;
             this.FeatureCostResults = featureCostResults;
-            this.TotalCost = totalCost;
+            this.TotalCostOfDelay = aTotalCostOfDelay;
         }
 
         /// <summary>
@@ -37,8 +37,8 @@
         public IReadOnlyList<FeatureCostResult> FeatureCostResults { get; }
 
         /// <summary>
-        /// Gets the total calculated cost.
+        /// Gets the total calculated cost of delay.
         /// </summary>
-        public decimal TotalCost { get; }
+        public decimal TotalCostOfDelay { get; }
     }
 }

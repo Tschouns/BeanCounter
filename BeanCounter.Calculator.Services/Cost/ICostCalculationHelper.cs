@@ -8,9 +8,9 @@
     public interface ICostCalculationHelper
     {
         /// <summary>
-        /// Calculates the absolute cost for the specified feature.
+        /// Calculates the absolute cost of delay for the specified feature.
         /// </summary>
-        decimal CalculateAbsoluteCostForFeature(
+        decimal CalculateAbsoluteCostOfDelayForFeature(
             Feature feature,
             decimal daysUntilImplementationStart);
     }

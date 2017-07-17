@@ -13,13 +13,13 @@
         /// </summary>
         public FeatureCostResult(
             Feature feature,
-            decimal totalCost)
+            decimal absoluteCostOfDelay)
         {
             ArgumentChecks.AssertNotNull(feature, nameof(feature));
-            ArgumentChecks.AssertNotNegative(totalCost, nameof(totalCost));
+            ArgumentChecks.AssertNotNegative(absoluteCostOfDelay, nameof(absoluteCostOfDelay));
 
             this.Feature = feature;
-            this.AbsoluteCost = totalCost;
+            this.AbsoluteCostOfDelay = absoluteCostOfDelay;
         }
 
         /// <summary>
@@ -28,8 +28,8 @@
         public Feature Feature { get; }
 
         /// <summary>
-        /// Gets the absolute calculated cost for this feature, given its order in the combination.
+        /// Gets the calculated absolute cost of delay for this feature, given its order in the combination.
         /// </summary>
-        public decimal AbsoluteCost { get; }
+        public decimal AbsoluteCostOfDelay { get; }
     }
 }
