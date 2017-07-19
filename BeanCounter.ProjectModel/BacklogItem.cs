@@ -18,7 +18,7 @@
         }
 
         /// <summary>
-        /// Gets the item
+        /// Gets the item.
         /// </summary>
         public Item Item { get; }
 

@@ -1,27 +1,19 @@
-﻿namespace BeanCounter.ProjectModel
+﻿namespace BeanCounter.ProjectSerializer.Services.Xml.XmlModel.Version1
 {
     using System;
 
     /// <summary>
-    /// Represents an item within <c>BeanCounter</c> project.
+    /// Represents an item in the XML structure.
     /// </summary>
-    public class Item
+    public class XmlItem
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Item"/> class.
+        /// Gets or sets the ID.
         /// </summary>
-        public Item(Guid id)
-        {
-            this.Id = id;
-        }
+        public Guid Id { get; set; }
 
         /// <summary>
-        /// Gets the unique technical idetifier.
-        /// </summary>
-        public Guid Id { get; }
-
-        /// <summary>
-        /// Gets the public identifier, which can be used in the UI and with other external interfaces.
+        /// Gets or sets the public identifier.
         /// </summary>
         public string PublicIdentifier { get; }
 
@@ -31,12 +23,12 @@
         public string Summary { get; set; }
 
         /// <summary>
-        /// Gets or sets the item summary.
+        /// Gets the item summary.
         /// </summary>
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or sets the estimated cost of delay per day (in an arbitrary currency).
+        /// Gets or sets the estimated cost of delay per day.
         /// </summary>
         public decimal EstimatedCostOfDelayPerDay { get; set; }
 

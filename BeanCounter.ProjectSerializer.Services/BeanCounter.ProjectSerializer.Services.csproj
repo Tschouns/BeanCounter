@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Xml\ProjectXmlFileService.cs" />
+    <Compile Include="Xml\XmlModel\Version1\XmlBacklog.cs" />
+    <Compile Include="Xml\XmlModel\Version1\XmlBacklogItem.cs" />
+    <Compile Include="Xml\XmlModel\Version1\XmlItem.cs" />
     <Compile Include="Xml\XmlModel\Version1\XmlProject.cs" />
     <Compile Include="Xml\XmlModel\XmlBaseProject.cs" />
   </ItemGroup>
