@@ -55,6 +55,11 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Xml\Serializer\Version1ProjectXmlSerializerTests.cs" />
+    <Compile Include="Xml\Serializer\XmlFiles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XmlFiles.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BeanCounter.ProjectModel\BeanCounter.ProjectModel.csproj">
@@ -65,6 +70,15 @@
       <Project>{86893686-FB89-4EA5-A5CB-F20AA5AFFB58}</Project>
       <Name>BeanCounter.ProjectSerializer.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Xml\Serializer\SampleProject.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Xml\Serializer\XmlFiles.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XmlFiles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

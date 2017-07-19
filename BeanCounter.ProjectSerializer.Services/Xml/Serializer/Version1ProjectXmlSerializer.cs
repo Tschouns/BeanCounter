@@ -48,6 +48,7 @@
                 var xmlItem = new XmlItem
                 {
                     Id = item.Id,
+                    PublicIdentifier = item.PublicIdentifier,
                     Summary = item.Summary,
                     Description = item.Description,
                     EstimatedCostOfDelayPerDay = item.EstimatedCostOfDelayPerDay,

@@ -35,11 +35,13 @@
         /// <summary>
         /// Gets or sets the items.
         /// </summary>
+        [DataMember]
         public IList<XmlItem> Items { get; }
 
         /// <summary>
         /// Gets or sets backlogs.
         /// </summary>
+        [DataMember]
         public IList<XmlBacklog> Backlogs { get; }
     }
 }

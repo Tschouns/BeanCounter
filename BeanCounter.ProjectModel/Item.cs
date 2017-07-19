@@ -21,9 +21,9 @@
         public Guid Id { get; }
 
         /// <summary>
-        /// Gets the public identifier, which can be used in the UI and with other external interfaces.
+        /// Gets or sets the public identifier, which can be used in the UI and with other external interfaces.
         /// </summary>
-        public string PublicIdentifier { get; }
+        public string PublicIdentifier { get; set; }
 
         /// <summary>
         /// Gets or sets the item summary.

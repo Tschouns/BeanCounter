@@ -1,0 +1,39 @@
+﻿<Project xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.github.com/tschouns/beancounter">
+  <VersionInfo>1</VersionInfo>
+  <Backlogs>
+    <Backlog>
+      <BacklogItems>
+        <BacklogItem>
+          <ItemId>ab1f3206-602c-457b-8747-5d7f5c3a0fa0</ItemId>
+          <Rank>2</Rank>
+        </BacklogItem>
+        <BacklogItem>
+          <ItemId>4557a9cc-360e-4bd1-8ff0-e7c24d40ca9a</ItemId>
+          <Rank>1</Rank>
+        </BacklogItem>
+      </BacklogItems>
+      <Id>38df6656-5a16-41b1-aba8-bc21eaf0d5c9</Id>
+      <Name>Features</Name>
+    </Backlog>
+  </Backlogs>
+  <Id>4557bea7-c5ad-4e64-b5b9-9bd2cd5a7c95</Id>
+  <Items>
+    <Item>
+      <Description>This is the first item in the project.</Description>
+      <EstimatedCostOfDelayPerDay>1.5</EstimatedCostOfDelayPerDay>
+      <EstimatedDevelopmentDurationInDays>30</EstimatedDevelopmentDurationInDays>
+      <Id>ab1f3206-602c-457b-8747-5d7f5c3a0fa0</Id>
+      <PublicIdentifier>Uno</PublicIdentifier>
+      <Summary>El Numero Uno</Summary>
+    </Item>
+    <Item>
+      <Description>This is the second item in the project.</Description>
+      <EstimatedCostOfDelayPerDay>0.4</EstimatedCostOfDelayPerDay>
+      <EstimatedDevelopmentDurationInDays>12</EstimatedDevelopmentDurationInDays>
+      <Id>4557a9cc-360e-4bd1-8ff0-e7c24d40ca9a</Id>
+      <PublicIdentifier>Due</PublicIdentifier>
+      <Summary>El Numero Due</Summary>
+    </Item>
+  </Items>
+  <Title>Manhatten Project</Title>
+</Project>
