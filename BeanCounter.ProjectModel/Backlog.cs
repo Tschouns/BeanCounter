@@ -15,6 +15,7 @@
         public Backlog(Guid id)
         {
             this.Id = id;
+            this.Items = new List<BacklogItem>();
         }
 
         /// <summary>
@@ -28,8 +29,8 @@
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets the items in this backlog.
+        /// Gets the backlog items.
         /// </summary>
-        public IList<Item> Items { get; }
+        public IList<BacklogItem> Items { get; }
     }
 }

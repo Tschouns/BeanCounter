@@ -4,6 +4,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeanCounter.TestApp", "BeanCounter.TestApp\BeanCounter.TestApp.csproj", "{82C15B6F-19BF-4E12-87C4-F2798902D25D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EBB2ED0C-017C-468C-9BBA-5DA8B91137F5} = {EBB2ED0C-017C-468C-9BBA-5DA8B91137F5}
+		{4B178642-2AE3-44FD-A900-127CE3E64592} = {4B178642-2AE3-44FD-A900-127CE3E64592}
+		{86893686-FB89-4EA5-A5CB-F20AA5AFFB58} = {86893686-FB89-4EA5-A5CB-F20AA5AFFB58}
+		{47F047CD-389A-40B3-A46E-32E7BFAE20F4} = {47F047CD-389A-40B3-A46E-32E7BFAE20F4}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeanCounter.Base", "BeanCounter.Base\BeanCounter.Base.csproj", "{7A1680E7-7FA0-49CC-A29B-92035E075B0C}"
 EndProject
@@ -14,6 +20,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeanCounter.Calculator.Test", "BeanCounter.Calculator.Test\BeanCounter.Calculator.Test.csproj", "{0E2B05C9-2331-4888-9F39-65F83320D653}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeanCounter.ProjectModel", "BeanCounter.ProjectModel\BeanCounter.ProjectModel.csproj", "{4B178642-2AE3-44FD-A900-127CE3E64592}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeanCounter.ProjectSerializer", "BeanCounter.ProjectSerializer\BeanCounter.ProjectSerializer.csproj", "{47F047CD-389A-40B3-A46E-32E7BFAE20F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeanCounter.ProjectSerializer.Services", "BeanCounter.ProjectSerializer.Services\BeanCounter.ProjectSerializer.Services.csproj", "{86893686-FB89-4EA5-A5CB-F20AA5AFFB58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeanCounter.ProjectSerializer.Tests", "BeanCounter.ProjectSerializer.Tests\BeanCounter.ProjectSerializer.Tests.csproj", "{F08D4A19-79D1-4E1F-8AF5-E9B360DC3BBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +57,18 @@ Global
 		{4B178642-2AE3-44FD-A900-127CE3E64592}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B178642-2AE3-44FD-A900-127CE3E64592}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B178642-2AE3-44FD-A900-127CE3E64592}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47F047CD-389A-40B3-A46E-32E7BFAE20F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47F047CD-389A-40B3-A46E-32E7BFAE20F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47F047CD-389A-40B3-A46E-32E7BFAE20F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47F047CD-389A-40B3-A46E-32E7BFAE20F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86893686-FB89-4EA5-A5CB-F20AA5AFFB58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86893686-FB89-4EA5-A5CB-F20AA5AFFB58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86893686-FB89-4EA5-A5CB-F20AA5AFFB58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86893686-FB89-4EA5-A5CB-F20AA5AFFB58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F08D4A19-79D1-4E1F-8AF5-E9B360DC3BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F08D4A19-79D1-4E1F-8AF5-E9B360DC3BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F08D4A19-79D1-4E1F-8AF5-E9B360DC3BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F08D4A19-79D1-4E1F-8AF5-E9B360DC3BBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
