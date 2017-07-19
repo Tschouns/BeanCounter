@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Xml\ProjectXmlFileService.cs" />
+    <Compile Include="Xml\Serializer\IProjectXmlSerializer.cs" />
+    <Compile Include="Xml\Serializer\Version1ProjectXmlSerializer.cs" />
     <Compile Include="Xml\XmlModel\Version1\XmlBacklog.cs" />
     <Compile Include="Xml\XmlModel\Version1\XmlBacklogItem.cs" />
     <Compile Include="Xml\XmlModel\Version1\XmlItem.cs" />
@@ -63,9 +65,7 @@
       <Name>BeanCounter.ProjectSerializer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Xml\Serializer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

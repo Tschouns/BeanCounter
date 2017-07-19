@@ -2,10 +2,12 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Represents a project in the XML structure.
     /// </summary>
+    [DataContract(Name = "Project", Namespace = "http://www.github.com/tschouns/beancounter")]
     public class XmlProject : XmlBaseProject
     {
         /// <summary>
@@ -21,11 +23,13 @@
         /// <summary>
         /// Gets or sets the ID.
         /// </summary>
+        [DataMember]
         public Guid Id { get; set; }
 
         /// <summary>
         /// Gets or sets the title.
         /// </summary>
+        [DataMember]
         public string Title { get; set; }
 
         /// <summary>

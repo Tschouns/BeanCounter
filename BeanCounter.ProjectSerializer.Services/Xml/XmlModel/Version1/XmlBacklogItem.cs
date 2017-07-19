@@ -10,7 +10,7 @@
         /// <summary>
         /// Gets or sets the item ID.
         /// </summary>
-        public Guid ItemId { get; }
+        public Guid ItemId { get; set; }
 
         /// <summary>
         /// Gets or sets the rank.
