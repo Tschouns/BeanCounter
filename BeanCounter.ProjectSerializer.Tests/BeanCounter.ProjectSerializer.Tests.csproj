@@ -62,6 +62,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BeanCounter.Base\BeanCounter.Base.csproj">
+      <Project>{7A1680E7-7FA0-49CC-A29B-92035E075B0C}</Project>
+      <Name>BeanCounter.Base</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BeanCounter.ProjectModel\BeanCounter.ProjectModel.csproj">
       <Project>{4b178642-2ae3-44fd-a900-127ce3e64592}</Project>
       <Name>BeanCounter.ProjectModel</Name>

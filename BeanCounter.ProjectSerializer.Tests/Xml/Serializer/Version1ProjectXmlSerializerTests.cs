@@ -23,20 +23,17 @@
 
             var sampleProject = CreateSampleProject();
 
-            var xmlStringBuilder = new StringBuilder();
-            var xmlTextWriter = new XmlTextWriter(new StringWriter(xmlStringBuilder));
+            var xmlOutputStringBuilder = new StringBuilder();
+            var xmlTextWriter = new XmlTextWriter(new StringWriter(xmlOutputStringBuilder));
 
             // Act
             candidate.Serialize(sampleProject, xmlTextWriter);
 
             // Assert
-            var xmlString = xmlStringBuilder.ToString();
+            var expectedXmlOutputString = RemoveWhiteSpace(XmlFiles.SampleProject);
+            var actualXmlOutputString = xmlOutputStringBuilder.ToString();
 
-            Assert.IsTrue(xmlString.Contains("<Id>"));
-            Assert.IsTrue(xmlString.Contains("<Title>"));
-
-            Assert.IsTrue(xmlString.Contains(sampleProject.Id.ToString()));
-            Assert.IsTrue(xmlString.Contains(sampleProject.Title));
+            Assert.AreEqual(expectedXmlOutputString, actualXmlOutputString);
         }
 
         private static Project CreateSampleProject()
@@ -87,6 +84,14 @@
             project.Backlogs.Add(backlog);
 
             return project;
+        }
+
+        private static string RemoveWhiteSpace(string xmlString)
+        {
+            var xmlDocument = new XmlDocument();
+            xmlDocument.InnerXml = xmlString;
+
+            return xmlDocument.InnerXml;
         }
     }
 }
