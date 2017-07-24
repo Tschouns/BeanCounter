@@ -1,6 +1,6 @@
 ﻿namespace BeanCounter.ProjectSerializer.Services.Xml.Serializer
 {
-    using System;
+    using System.Linq;
     using System.Xml;
     using BeanCounter.ProjectModel;
     using XmlModel.Version1;
@@ -30,11 +30,19 @@
         /// </summary>
         public Project Deserialize(XmlReader xmlReader)
         {
-            throw new NotImplementedException();
+            ArgumentChecks.AssertNotNull(xmlReader, nameof(xmlReader));
+
+            var serializer = new DataContractSerializer(typeof(XmlProject));
+            var xmlProject = (XmlProject)serializer.ReadObject(xmlReader);
+            var project = ToProject(xmlProject);
+
+            return project;
         }
 
         private static XmlProject ToXmlProject(Project project)
         {
+            ArgumentChecks.AssertNotNull(project, nameof(project));
+
             // Create XML project.
             var xmlProject = new XmlProject
             {
@@ -83,6 +91,53 @@
             }
 
             return xmlProject;
+        }
+
+        private static Project ToProject(XmlProject xmlProject)
+        {
+            ArgumentChecks.AssertNotNull(xmlProject, nameof(xmlProject));
+
+            var project = new Project(xmlProject.Id)
+            {
+                Title = xmlProject.Title
+            };
+
+            foreach (var xmlItem in xmlProject.Items)
+            {
+                var item = new Item(xmlItem.Id)
+                {
+                    PublicIdentifier = xmlItem.PublicIdentifier,
+                    Summary = xmlItem.Summary,
+                    Description = xmlItem.Description,
+                    EstimatedCostOfDelayPerDay = xmlItem.EstimatedCostOfDelayPerDay,
+                    EstimatedDevelopmentDurationInDays = xmlItem.EstimatedDevelopmentDurationInDays
+                };
+
+                project.Items.Add(item);
+            }
+
+            foreach (var xmlBacklog in xmlProject.Backlogs)
+            {
+                var backlog = new Backlog(xmlBacklog.Id)
+                {
+                    Name = xmlBacklog.Name
+                };
+
+                foreach (var xmlBacklogItem in xmlBacklog.BacklogItems)
+                {
+                    var referencedItem = project.Items.Single(i => i.Id == xmlBacklogItem.ItemId);
+                    var backlogItem = new BacklogItem(referencedItem)
+                    {
+                        Rank = xmlBacklogItem.Rank
+                    };
+
+                    backlog.BacklogItems.Add(backlogItem);
+                }
+
+                project.Backlogs.Add(backlog);
+            }
+
+            return project;
         }
     }
 }
